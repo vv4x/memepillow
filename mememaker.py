@@ -18,7 +18,7 @@ draw = ImageDraw.Draw(image)
 with Image.open(path) as img:
     width, height = img.size
 
-textsize = (height // 10)
+textsize = (height // 7)
 strokesize = (height // 200)
 
 font = ImageFont.truetype('impact.ttf', size = textsize)

@@ -23,7 +23,7 @@ strokesize = (height // 200)
 
 font = ImageFont.truetype('impact.ttf', size = textsize)
 
-draw.text((width // 2, height / 35),text_u, font = font, fill = (0,0,0), align = 'center', anchor = 'mt', stroke_width = strokesize, stroke_fill = (255,255,255))
+draw.text((width // 2, height / 35),text_t, font = font, fill = (0,0,0), align = 'center', anchor = 'mt', stroke_width = strokesize, stroke_fill = (255,255,255))
 draw.text((width // 2, height - textsize ),text_b, font = font, fill = (0,0,0), align = 'center', anchor = 'mt', stroke_width = strokesize, stroke_fill = (255,255,255))
 
 image.save(path_s)

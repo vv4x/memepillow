@@ -3,11 +3,13 @@ from PIL import Image, ImageFilter, ImageOps, ImageDraw, ImageFont
 from io import BytesIO
 
 #rawtext = input('what bottomtext: ')
-rawtext = input("bottomtext: ")
+rawtext_top = input("toptext: ")
+rawtext_bottom = input("bottomtext: ")
 path = input("path: ")
+path_s = input("save path: ")
 
-text = rawtext.upper()
-
+text_t = rawtext_top.upper()
+text_b = rawtext_bottom.upper()
 
 
 image = Image.open(path)
@@ -21,9 +23,8 @@ strokesize = (height // 200)
 
 font = ImageFont.truetype('impact.ttf', size = textsize)
 
-draw.text((width // 2, height / 35),text, font = font, fill = (0,0,0), align = 'center', anchor = 'mt', stroke_width = strokesize, stroke_fill = (255,255,255))
-draw.text((width // 2, height - textsize ),'BOTTOM TEXT', font = font, fill = (0,0,0), align = 'center', anchor = 'mt', stroke_width = strokesize, stroke_fill = (255,255,255))
+draw.text((width // 2, height / 35),text_u, font = font, fill = (0,0,0), align = 'center', anchor = 'mt', stroke_width = strokesize, stroke_fill = (255,255,255))
+draw.text((width // 2, height - textsize ),text_b, font = font, fill = (0,0,0), align = 'center', anchor = 'mt', stroke_width = strokesize, stroke_fill = (255,255,255))
 
-image.save('bottomtext1.png')
-
+image.save(path_s)
 
